@@ -6,8 +6,8 @@ import { setRestaurants, setRestaurant } from '../../redux/modules/restaurants';
 
 export const MapContainer = (props) => {
   const dispatch = useDispatch();
-  const [map, setMap] = useState(null);
   const { restaurants } = useSelector((state) => state.restaurants);
+  const [map, setMap] = useState(null);
   const { google, query, placeId } = props;
 
   const searchByQuery = useCallback(
@@ -31,7 +31,7 @@ export const MapContainer = (props) => {
     [dispatch, google]
   );
 
-  const getDetails = useCallback(
+  const getRestaurantById = useCallback(
     (placeId) => {
       const service = new google.maps.places.PlacesService(map);
       dispatch(setRestaurant(null));
@@ -64,6 +64,7 @@ export const MapContainer = (props) => {
 
   const searchNearby = (map, center) => {
     const service = new google.maps.places.PlacesService(map);
+    dispatch(setRestaurants([]));
 
     const request = {
       location: center,
