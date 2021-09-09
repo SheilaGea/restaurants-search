@@ -5,7 +5,7 @@ import restaurante from '../../assets/restaurante-fake.png'
 import ImageSkeleton from '../Skeleton';
 
 import { Restaurant, RestaurantInfo, Content, RestaurantPhoto, Title, Address } from './styles';
-import Text from '../Text';
+
 
 
 const ResturantCard = ({ restaurant, onClick }) => {
@@ -14,8 +14,8 @@ const ResturantCard = ({ restaurant, onClick }) => {
   return (
     <Restaurant onClick={onClick}>
       <RestaurantInfo>
-        <Text size="large">{restaurant.name}</Text>
-        <ReactStars count={5} value={restaurant.rating} edit={false} isHalf activeColor="#e7711c" />
+        <Title size="large">{restaurant.name}</Title>
+        <ReactStars count={5} isHalf value={4} edit={false} activeColor="#e7711c" />
         <Address>{restaurant.vicinity || restaurant.formatted_address}</Address>
         <Content size="medium">{restaurant.formatted_address || restaurant.vicinity}</Content>
       </RestaurantInfo>

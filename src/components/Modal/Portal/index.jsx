@@ -6,3 +6,4 @@ const PortalModal = ({ children }) => {
 };
 
 export default PortalModal;
+

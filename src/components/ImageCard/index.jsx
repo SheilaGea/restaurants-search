@@ -3,23 +3,19 @@ import styled from 'styled-components';
 
 import Skeleton from '../Skeleton';
 
-export const Card = styled.div`
+const Card = styled.div`
   display: flex;
   justufy-content: center;
-  pandding: 5xp;
+  pandding: 5px;
   width: 90px;
   height: 90px;
   border-radius: 6px;
   background-image: url(${(props) => props.photo});
   background-size: cover;
-  p {
-    margin-left: 6px;
-    margin-top: 10px;
-  }
 `;
 
 const Title = styled.span`
-  font-family: ${(props) => props.theme.fonts.reular};
+  font-family: ${(props) => props.theme.fonts.regular};
   color: #ffffff;
   font-size: 16px;
 `;

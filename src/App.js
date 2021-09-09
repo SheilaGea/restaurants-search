@@ -1,5 +1,5 @@
 import React from 'react';
-import { provider } from 'react-redux';
+import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import { Reset } from 'styled-reset';
 

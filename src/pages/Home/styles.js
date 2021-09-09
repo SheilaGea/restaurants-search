@@ -30,8 +30,8 @@ export const Map = styled.div`
  `;
 
  export const Carousel = styled(Slider)`
- .slick-slide {
-   margin-right: 30px;
+  .slick-slide {
+    margin-right: 30px;
  }
 `;
 
@@ -49,7 +49,6 @@ export const Map = styled.div`
  letter-spacing: 0.11px;
  font-family: ${(props) => props.theme.fonts.regular};
  color: ${(props) => props.theme.colors.text};
- text-transform: none;
  line-height: 29px;
  font-size: 24px;
  font-weight: bold;

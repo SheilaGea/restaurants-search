@@ -6,8 +6,8 @@ import { Overlay, Dialog } from './styles';
 
 const Modal = ({ children, open, onClose }) => {
   useEffect(() => {
-    function onEsc(event) {
-      if (event.keyCode === 27) onClose();
+    function onEsc(e) {
+      if (e.keyCode === 27) onClose();
     }
     window.addEventListener('keydown', onEsc);
 
@@ -15,15 +15,14 @@ const Modal = ({ children, open, onClose }) => {
       window.addEventListener('keydown', onEsc);
     };
   }, [onClose]);
-
-  if (!open) return null;
+ 
 
   function onOverlayClick() {
     onClose();
   }
 
-  function onDialogClick(event) {
-    event.stopPropagation();
+  function onDialogClick(e) {
+    e.stopPropagation();
   }
 
   return (
@@ -35,4 +34,4 @@ const Modal = ({ children, open, onClose }) => {
   );
 };
 
-export default Modal;
+export default Modal; 

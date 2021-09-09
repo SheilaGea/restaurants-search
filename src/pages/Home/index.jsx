@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import TextField, { Input } from 'node_modules/@material/react-text-field';
+import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 
 import logo from '../../assets/logo.svg';
@@ -14,16 +14,16 @@ import {
   Logo, 
   Wrapper, 
   CarouselTitle, 
+  ModalTitle,
   ModalContent,
 } from './styles';
 
 const Home = () => {
-  const [value, setValue] = useState('');
+  const [inputValue, setInputValue] = useState('');
   const [query, setQuery] = useState(null);
   const [placeId, setPlaceId] = useState(null);
-  const [open, setOpen] = useState(false);
+  const [modalOpened, setModalOpened] = useState(false);
   const { restaurants, restaurantSelected } = useSelector((state) => state.restaurants);
-  const hasRestaurants = restaurants.length > 0;
 
   const settings = {
     dots: false,
@@ -35,7 +35,7 @@ const Home = () => {
     adaptiveHeight: true,
   };
 
-  function handleKeyPress = (e) {
+  function handleKeyPress (e) {
     if (e.key === 'Enter') {
       setQuery(inputValue);
     }
@@ -45,7 +45,6 @@ const Home = () => {
     setPlaceId(placeId);
     setModalOpened(true);
   }
-
 
   return (
     <Wrapper>

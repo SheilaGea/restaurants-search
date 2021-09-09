@@ -10,7 +10,7 @@ const keyFrameLoading = keyframes`
   }
 `;
 
-export const LoadingSkeleton = styled.div`
+const LoadingSkeleton = styled.div`
   background-color: gray;
   border-radius: 6px;
   margin-bottom: 10px;
