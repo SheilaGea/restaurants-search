@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Links
 You can visit the site through this link:
 
-restaurante-dio.netlify.app
+https://restaurante-dio.netlify.app
 
 ## Available Scripts
 
